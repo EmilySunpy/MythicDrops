@@ -1,7 +1,7 @@
 rootProject.name = "mythicdropskt"
 
 gradle.allprojects {
-    group = "io.pixeloutlaw.minecraft.spigot"
+    group = "io.pixeloutlaw.mythicdrops"
     version = "420.0.0-SNAPSHOT"
 
     repositories {
