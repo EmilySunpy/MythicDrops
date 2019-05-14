@@ -238,7 +238,7 @@ public final class SockettingListener implements Listener {
 
       Tier tier = TierUtil.getTierFromItemStack(itemInHand);
 
-      ChatColor cc = tier != null ? tier.getDisplayColor() : ChatColor.GOLD;
+      ChatColor cc = tier != null ? tier.getDisplayColor() : mythicDrops.getSockettingSettings().getDefaultSocketNameColorOnItems();
 
       lore.set(index, cc + socketGem.getName());
 

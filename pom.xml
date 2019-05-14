@@ -163,7 +163,7 @@
             <configuration>
               <artifactSet>
                 <includes>
-                  <include>io.pixeloutlaw:spigot-commons</include>
+                  <include>io.pixeloutlaw.spigot-commons:spigot-commons</include>
                   <include>org.apache.commons:commons-text</include>
                 </includes>
               </artifactSet>
@@ -246,28 +246,9 @@
   <dependencies>
     <dependency>
       <groupId>io.pixeloutlaw.spigot-commons</groupId>
-      <artifactId>amp-menus</artifactId>
-      <version>1.12.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>io.pixeloutlaw.spigot-commons</groupId>
-      <artifactId>config</artifactId>
-      <version>1.12.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>io.pixeloutlaw.spigot-commons</groupId>
-      <artifactId>fanciful</artifactId>
-      <version>1.12.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>io.pixeloutlaw.spigot-commons</groupId>
-      <artifactId>hilt</artifactId>
-      <version>1.12.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>io.pixeloutlaw.spigot-commons</groupId>
-      <artifactId>method-command</artifactId>
-      <version>1.12.2.2</version>
+      <artifactId>spigot-commons</artifactId>
+      <version>1.12.2.3-SNAPSHOT</version>
+      <classifier>all</classifier>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>

@@ -1370,6 +1370,8 @@ public final class MythicDropsPlugin extends JavaPlugin implements MythicDrops {
     mss.setSocketGemLore(c.getStringList("items.socket-lore"));
     mss.setSockettedItemString(c.getString("items.socketted-item-socket", "&6(Socket)"));
     mss.setSockettedItemLore(c.getStringList("items.socketted-item-lore"));
+    mss.setDefaultSocketNameColorOnItems(
+        ChatColorUtil.getChatColorOrFallback(c.getString("items.default-socket-name-color-on-items"), ChatColor.GOLD));
 
     LOGGER.info("Loaded Socket Gems Materials: " + loadedSocketGemMats.toString());
 
