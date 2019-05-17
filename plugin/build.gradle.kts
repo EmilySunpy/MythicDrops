@@ -12,11 +12,13 @@ dependencies {
     implementation(Libs.spigot_api)
     implementation(Libs.plugin_annotations)
     implementation(Libs.kotlin_stdlib_jdk8)
+    implementation(Libs.dagger)
 
     implementation(project(":hilt"))
     implementation(project(":api"))
 
     kapt(Libs.plugin_annotations)
+    kapt(Libs.dagger_compiler)
 
     testImplementation(Libs.spek_dsl_jvm)
     testRuntimeOnly(Libs.spek_runner_junit5)

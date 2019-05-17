@@ -1,5 +1,3 @@
-import kotlin.String
-
 /**
  * Find which updates are available by running
  *     `$ ./gradlew buildSrcVersions`
@@ -10,6 +8,8 @@ object Versions {
     const val com_diffplug_gradle_spotless_gradle_plugin: String = "3.23.0" 
 
     const val com_github_johnrengelman_shadow_gradle_plugin: String = "5.0.0" 
+
+    const val com_google_dagger: String = "2.22.1" 
 
     const val com_gradle_build_scan_gradle_plugin: String = "2.2.1" // available: "2.3"
 
@@ -37,7 +37,7 @@ object Versions {
 
         const val currentVersion: String = "5.4.1"
 
-        const val nightlyVersion: String = "5.5-20190516000042+0000"
+        const val nightlyVersion: String = "5.6-20190517000853+0000"
 
         const val releaseCandidate: String = ""
     }
