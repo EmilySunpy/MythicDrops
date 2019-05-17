@@ -1,11 +1,13 @@
 plugins {
     kotlin("jvm")
+    id("io.pixeloutlaw.gradle.buildconfigkt") version Versions.io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin
     `maven-publish`
 }
 
 dependencies {
     implementation(Libs.spigot_api)
     implementation(Libs.kotlin_stdlib_jdk8)
+    api(project(":commons"))
 
     testImplementation(Libs.spek_dsl_jvm)
     testRuntimeOnly(Libs.spek_runner_junit5)
@@ -21,11 +23,5 @@ publishing {
 
             from(components["java"])
         }
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform {
-        includeEngines("spek2")
     }
 }

@@ -8,10 +8,12 @@ gradle.allprojects {
         mavenCentral()
         jcenter()
         maven {
-            url = uri("https://hub.spigotmc.org/nexus/content/groups/public")
+            url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
         }
-        maven { url = uri("https://jitpack.io") }
+        maven {
+            url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+        }
     }
 }
 
-include("hilt", "mythicdrops")
+include("hilt", "commons", "api", "plugin")

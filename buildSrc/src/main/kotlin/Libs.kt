@@ -14,6 +14,10 @@ object Libs {
             "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin:" +
             Versions.com_github_johnrengelman_shadow_gradle_plugin
 
+    const val com_gradle_build_scan_gradle_plugin: String =
+            "com.gradle.build-scan:com.gradle.build-scan.gradle.plugin:" +
+            Versions.com_gradle_build_scan_gradle_plugin
+
     const val de_fayard_buildsrcversions_gradle_plugin: String =
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
@@ -21,9 +25,6 @@ object Libs {
     const val io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin: String =
             "io.pixeloutlaw.gradle.buildconfigkt:io.pixeloutlaw.gradle.buildconfigkt.gradle.plugin:" +
             Versions.io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin
-
-    const val nebula_project_gradle_plugin: String =
-            "nebula.project:nebula.project.gradle.plugin:" + Versions.nebula_project_gradle_plugin
 
     const val org_jetbrains_kotlin_jvm_gradle_plugin: String =
             "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:" +
@@ -37,6 +38,11 @@ object Libs {
 
     /**
      * https://kotlinlang.org/ */
+    const val kotlin_reflect: String = "org.jetbrains.kotlin:kotlin-reflect:" +
+            Versions.org_jetbrains_kotlin
+
+    /**
+     * https://kotlinlang.org/ */
     const val kotlin_scripting_compiler_embeddable: String =
             "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
             Versions.org_jetbrains_kotlin
@@ -45,6 +51,12 @@ object Libs {
      * https://kotlinlang.org/ */
     const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
+
+    const val spek_dsl_jvm: String = "org.spekframework.spek2:spek-dsl-jvm:" +
+            Versions.org_spekframework_spek2
+
+    const val spek_runner_junit5: String = "org.spekframework.spek2:spek-runner-junit5:" +
+            Versions.org_spekframework_spek2
 
     const val plugin_annotations: String = "org.spigotmc:plugin-annotations:" +
             Versions.plugin_annotations

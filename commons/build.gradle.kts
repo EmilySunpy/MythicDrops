@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    id("io.pixeloutlaw.gradle.buildconfigkt") version Versions.io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin
     `maven-publish`
 }
 
@@ -21,11 +22,5 @@ publishing {
 
             from(components["java"])
         }
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform {
-        includeEngines("spek2")
     }
 }

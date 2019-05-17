@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     base
+    `build-scan`
     kotlin("jvm") version Versions.org_jetbrains_kotlin_jvm_gradle_plugin apply false
-    id("nebula.project") version Versions.nebula_project_gradle_plugin
     id("com.diffplug.gradle.spotless") version Versions.com_diffplug_gradle_spotless_gradle_plugin apply false
     id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
 }
@@ -26,4 +26,17 @@ subprojects {
             }
         }
     }
+
+    tasks.withType<Test> {
+        useJUnitPlatform {
+            includeEngines("spek2")
+        }
+    }
+}
+
+buildScan {
+    termsOfServiceUrl = "https://gradle.com/terms-of-service"
+    termsOfServiceAgree = "yes"
+
+    publishAlways()
 }
