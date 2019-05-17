@@ -5,6 +5,9 @@ import io.pixeloutlaw.minecraft.spigot.commons.logging.MythicLoggerFactory
 import io.pixeloutlaw.minecraft.spigot.commons.logging.MythicLoggingFormatter
 import io.pixeloutlaw.minecraft.spigot.hilt.getDisplayName
 import io.pixeloutlaw.minecraft.spigot.hilt.setDisplayName
+import io.pixeloutlaw.minecraft.spigot.mythicdrops.api.MythicDrops
+import io.pixeloutlaw.minecraft.spigot.mythicdrops.plugin.di.components.DaggerPluginComponent
+import io.pixeloutlaw.minecraft.spigot.mythicdrops.plugin.di.components.PluginComponent
 import io.pixeloutlaw.mythicdrops.plugin.BuildConfig
 import org.bukkit.Bukkit
 import org.bukkit.event.EventHandler
@@ -24,8 +27,11 @@ import java.util.logging.Logger
 @Description("A Spigot plugin for RPG-style drops.")
 @Author("Richard Harrah")
 @ApiVersion(ApiVersion.Target.v1_13)
-class MythicDropsPlugin : JavaPlugin(), Listener {
+class MythicDropsPlugin : JavaPlugin(), MythicDrops, Listener {
     private val mythicLogger = MythicLoggerFactory.getLogger(javaClass)
+    private val pluginComponent: PluginComponent by lazy {
+        DaggerPluginComponent.builder().mythicDrops(this).build()
+    }
     private lateinit var logHandler: Handler
 
     override fun onEnable() {
@@ -36,6 +42,9 @@ class MythicDropsPlugin : JavaPlugin(), Listener {
         }
 
         setupLogging()
+
+        pluginComponent.inject(this)
+
         server.pluginManager.registerEvents(this, this)
         mythicLogger.info("onEnable - plugin ${BuildConfig.VERSION} api ${io.pixeloutlaw.mythicdrops.api.BuildConfig.VERSION}")
     }

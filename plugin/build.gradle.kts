@@ -38,6 +38,8 @@ tasks.withType<ShadowJar> {
         include(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
         include(dependency("org.jetbrains.kotlin:kotlin-stdlib-common"))
         include(dependency("org.jetbrains:annotations"))
+        include(dependency("com.google.dagger:dagger"))
+        include(dependency("javax.inject:javax.inject"))
     }
 }
 
@@ -58,4 +60,8 @@ publishing {
             project.shadow.component(this@create)
         }
     }
+}
+
+buildConfigKt {
+    appName = "MythicDrops"
 }
