@@ -120,3 +120,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+api/out
+commons/out
+hilt/out
+plugin/out

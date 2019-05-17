@@ -15,6 +15,8 @@ object Versions {
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.3.2" 
 
+    const val io_gitlab_arturbosch_detekt_gradle_plugin: String = "1.0.0-RC14" 
+
     const val io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin: String = "1.0.1" 
 
     const val org_jetbrains_kotlin_jvm_gradle_plugin: String = "1.3.31" 
