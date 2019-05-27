@@ -7,9 +7,11 @@ plugins {
 dependencies {
     implementation(Libs.spigot_api)
     implementation(Libs.kotlin_stdlib_jdk8)
+    implementation(Libs.dagger)
 
-    testImplementation(Libs.spek_dsl_jvm)
-    testRuntimeOnly(Libs.spek_runner_junit5)
+    testImplementation(Libs.junit_jupiter_api)
+    testImplementation(Libs.truth)
+    testRuntimeOnly(Libs.junit_jupiter_engine)
     testRuntimeOnly(Libs.kotlin_reflect)
 }
 

@@ -23,6 +23,10 @@ object Libs {
      * https://github.com/google/dagger */
     const val dagger: String = "com.google.dagger:dagger:" + Versions.com_google_dagger
 
+    /**
+     * http://github.com/google/truth */
+    const val truth: String = "com.google.truth:truth:" + Versions.truth
+
     const val com_gradle_build_scan_gradle_plugin: String =
             "com.gradle.build-scan:com.gradle.build-scan.gradle.plugin:" +
             Versions.com_gradle_build_scan_gradle_plugin
@@ -31,13 +35,18 @@ object Libs {
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
 
+    const val detekt_cli: String = "io.gitlab.arturbosch.detekt:detekt-cli:" +
+            Versions.io_gitlab_arturbosch_detekt
+
     const val io_gitlab_arturbosch_detekt_gradle_plugin: String =
             "io.gitlab.arturbosch.detekt:io.gitlab.arturbosch.detekt.gradle.plugin:" +
-            Versions.io_gitlab_arturbosch_detekt_gradle_plugin
+            Versions.io_gitlab_arturbosch_detekt
 
     const val io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin: String =
             "io.pixeloutlaw.gradle.buildconfigkt:io.pixeloutlaw.gradle.buildconfigkt.gradle.plugin:" +
             Versions.io_pixeloutlaw_gradle_buildconfigkt_gradle_plugin
+
+    const val st4: String = "org.antlr:ST4:" + Versions.st4
 
     const val org_jetbrains_kotlin_jvm_gradle_plugin: String =
             "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:" +
@@ -65,11 +74,15 @@ object Libs {
     const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
             Versions.org_jetbrains_kotlin
 
-    const val spek_dsl_jvm: String = "org.spekframework.spek2:spek-dsl-jvm:" +
-            Versions.org_spekframework_spek2
+    /**
+     * https://junit.org/junit5/ */
+    const val junit_jupiter_api: String = "org.junit.jupiter:junit-jupiter-api:" +
+            Versions.org_junit_jupiter
 
-    const val spek_runner_junit5: String = "org.spekframework.spek2:spek-runner-junit5:" +
-            Versions.org_spekframework_spek2
+    /**
+     * https://junit.org/junit5/ */
+    const val junit_jupiter_engine: String = "org.junit.jupiter:junit-jupiter-engine:" +
+            Versions.org_junit_jupiter
 
     const val plugin_annotations: String = "org.spigotmc:plugin-annotations:" +
             Versions.plugin_annotations

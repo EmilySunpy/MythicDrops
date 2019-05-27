@@ -4,7 +4,7 @@ import java.util.Date
 import java.util.logging.LogRecord
 import java.util.logging.SimpleFormatter
 
-class MythicLoggingFormatter : SimpleFormatter() {
+class LoggingFormatter : SimpleFormatter() {
     private val loggingFormat: String = "[%1\$tF %1\$tT] [%2\$-7s] %3\$s - %4\$s %n"
 
     override fun format(record: LogRecord?): String {

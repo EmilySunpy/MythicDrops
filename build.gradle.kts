@@ -9,7 +9,7 @@ plugins {
     kotlin("jvm") version Versions.org_jetbrains_kotlin_jvm_gradle_plugin apply false
     id("com.diffplug.gradle.spotless") version Versions.com_diffplug_gradle_spotless_gradle_plugin apply false
     id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
-    id("io.gitlab.arturbosch.detekt") version Versions.io_gitlab_arturbosch_detekt_gradle_plugin apply false
+    id("io.gitlab.arturbosch.detekt") version Versions.io_gitlab_arturbosch_detekt apply false
 }
 
 subprojects {
@@ -31,9 +31,7 @@ subprojects {
     }
 
     tasks.withType<Test> {
-        useJUnitPlatform {
-            includeEngines("spek2")
-        }
+        useJUnitPlatform()
     }
 }
 

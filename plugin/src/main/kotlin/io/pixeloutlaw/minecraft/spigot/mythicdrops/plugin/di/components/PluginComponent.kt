@@ -4,7 +4,6 @@ import dagger.BindsInstance
 import dagger.Component
 import io.pixeloutlaw.minecraft.spigot.mythicdrops.api.MythicDrops
 import io.pixeloutlaw.minecraft.spigot.mythicdrops.plugin.MythicDropsPlugin
-import io.pixeloutlaw.minecraft.spigot.mythicdrops.plugin.di.scopes.MythicScope
 
 @Component
 @MythicScope

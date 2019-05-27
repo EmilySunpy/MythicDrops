@@ -1,8 +1,8 @@
 package io.pixeloutlaw.minecraft.spigot.mythicdrops.plugin
 
 import com.google.common.base.Strings
-import io.pixeloutlaw.minecraft.spigot.commons.logging.MythicLoggerFactory
-import io.pixeloutlaw.minecraft.spigot.commons.logging.MythicLoggingFormatter
+import io.pixeloutlaw.minecraft.spigot.commons.logging.LoggerFactory
+import io.pixeloutlaw.minecraft.spigot.commons.logging.LoggingFormatter
 import io.pixeloutlaw.minecraft.spigot.hilt.getDisplayName
 import io.pixeloutlaw.minecraft.spigot.hilt.setDisplayName
 import io.pixeloutlaw.minecraft.spigot.mythicdrops.api.MythicDrops
@@ -28,7 +28,7 @@ import java.util.logging.Logger
 @Author("Richard Harrah")
 @ApiVersion(ApiVersion.Target.v1_13)
 class MythicDropsPlugin : JavaPlugin(), MythicDrops, Listener {
-    private val mythicLogger = MythicLoggerFactory.getLogger(javaClass)
+    private val mythicLogger = LoggerFactory.getLogger(javaClass)
     private val pluginComponent: PluginComponent by lazy {
         DaggerPluginComponent.builder().mythicDrops(this).build()
     }
@@ -64,7 +64,7 @@ class MythicDropsPlugin : JavaPlugin(), MythicDrops, Listener {
     private fun setupLogging() {
         val pathToLogOutput = String.format("%s/mythicdrops.log", dataFolder.absolutePath)
         logHandler = FileHandler(pathToLogOutput, true)
-        logHandler.formatter = MythicLoggingFormatter()
+        logHandler.formatter = LoggingFormatter()
         Logger.getLogger("io.pixeloutlaw.minecraft.spigot").also {
             it.useParentHandlers = false
             it.addHandler(logHandler)
