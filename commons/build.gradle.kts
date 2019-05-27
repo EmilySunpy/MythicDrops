@@ -7,7 +7,6 @@ plugins {
 dependencies {
     implementation(Libs.spigot_api)
     implementation(Libs.kotlin_stdlib_jdk8)
-    implementation(Libs.dagger)
 
     testImplementation(Libs.junit_jupiter_api)
     testImplementation(Libs.truth)
