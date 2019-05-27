@@ -20,7 +20,7 @@ internal class TemplatingUtilTest {
         Truth.assertThat(randromanOpsString.operation).isEqualTo("randroman")
         Truth.assertThat(randromanOpsString.arguments).isEqualTo("")
     }
-    
+
     @Test
     fun `does opsString properly parse "randsign"`() {
         val randsignTemplateString = "randsign"

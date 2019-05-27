@@ -64,6 +64,6 @@ internal class ChatColorUtilTest {
 
     @Test
     fun `does getChatColor return found color`() {
-       assertThat(ChatColorUtil.getChatColor("GOLD")).isNotNull()
+        assertThat(ChatColorUtil.getChatColor("GOLD")).isNotNull()
     }
 }

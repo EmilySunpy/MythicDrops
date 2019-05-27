@@ -5,7 +5,7 @@ import java.util.function.Predicate
 /**
  * Represents a string template.
  */
-abstract class Template(val operation: String): Predicate<String>, Function1<String, String> {
+abstract class Template(val operation: String) : Predicate<String>, Function1<String, String> {
     /**
      * Tests to see if the template handles the given operation.
      *

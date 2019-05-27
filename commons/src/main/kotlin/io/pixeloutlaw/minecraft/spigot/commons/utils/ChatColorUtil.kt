@@ -27,9 +27,12 @@ object ChatColorUtil {
      */
     @JvmOverloads
     fun getChatColor(str: String?, fallback: ChatColor? = null): ChatColor? {
+        if (str == null) {
+            return fallback
+        }
         return try {
-            ChatColor.valueOf(str!!)
-        } catch (e: Exception) {
+            ChatColor.valueOf(str)
+        } catch (e: IllegalArgumentException) {
             fallback
         }
     }

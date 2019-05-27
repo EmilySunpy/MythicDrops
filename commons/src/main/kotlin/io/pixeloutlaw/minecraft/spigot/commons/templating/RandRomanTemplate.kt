@@ -8,6 +8,8 @@ import java.util.regex.Pattern
 class RandRomanTemplate : Template("randroman") {
     companion object {
         private val dashPattern = Pattern.compile("\\s*[-]\\s*")
+        private const val largestRoman = 5000
+        private const val smallestRoman = 1
         private val romanNumerals = mapOf(
             1000 to "M",
             900 to "CM",
@@ -46,7 +48,7 @@ class RandRomanTemplate : Template("randroman") {
     }
 
     private fun toRoman(number: Int): String? {
-        if (number > 5000 || number < 1) {
+        if (number > largestRoman || number < smallestRoman) {
             return null
         }
         var num = number
