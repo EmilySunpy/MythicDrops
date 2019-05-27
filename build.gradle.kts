@@ -1,6 +1,7 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
 import com.diffplug.gradle.spotless.SpotlessPlugin
 import io.gitlab.arturbosch.detekt.DetektPlugin
+import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -16,6 +17,9 @@ subprojects {
     pluginManager.withPlugin("org.jetbrains.kotlin.jvm") {
         this@subprojects.pluginManager.apply(DetektPlugin::class.java)
         this@subprojects.pluginManager.apply(SpotlessPlugin::class.java)
+        this@subprojects.configure<DetektExtension> {
+            baseline = this@subprojects.file("baseline.xml")
+        }
         this@subprojects.configure<SpotlessExtension> {
             kotlin {
                 target("src/**/*.kt")

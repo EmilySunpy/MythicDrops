@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist timestamp="1558992494222"></Blacklist>
+  <Whitelist timestamp="1558992494222">
+    <ID>NewLineAtEndOfFile:MythicDrops.kt$io.pixeloutlaw.minecraft.spigot.mythicdrops.api.MythicDrops.kt</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -16,4 +16,11 @@ gradle.allprojects {
     }
 }
 
-include("hilt", "commons", "api", "plugin")
+include(
+    "hilt",
+    "commons",
+    "api",
+    "spigot-plugin-yml-annotations",
+    "spigot-plugin-yml-compiler",
+    "plugin"
+)

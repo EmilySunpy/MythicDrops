@@ -10,14 +10,14 @@ plugins {
 
 dependencies {
     implementation(Libs.spigot_api)
-    implementation(Libs.plugin_annotations)
     implementation(Libs.kotlin_stdlib_jdk8)
     implementation(Libs.dagger)
 
+    implementation(project(":spigot-plugin-yml-annotations"))
     implementation(project(":hilt"))
     implementation(project(":api"))
 
-    kapt(Libs.plugin_annotations)
+    kapt(project(":spigot-plugin-yml-compiler"))
     kapt(Libs.dagger_compiler)
 
     testImplementation(Libs.junit_jupiter_api)
