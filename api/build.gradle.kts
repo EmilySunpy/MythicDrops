@@ -8,6 +8,7 @@ dependencies {
     implementation(Libs.spigot_api)
     implementation(Libs.kotlin_stdlib_jdk8)
     api(project(":commons"))
+    api("org.spongepowered:configurate-yaml:3.6")
 
     testImplementation(Libs.junit_jupiter_api)
     testImplementation(Libs.truth)
